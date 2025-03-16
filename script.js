@@ -1,10 +1,10 @@
 // Dynamic Background Color Change
 const body = document.body;
-const colors = ["#007BFF", "#00FF88", "#FF5733", "#F333FF", "#FFC300"];
+const colors = ["#1a1a1a", "#333", "#007BFF", "#00FF88", "#FF5733", "#F333FF"];
 let currentColorIndex = 0;
 
 function changeBackgroundColor() {
-    body.style.backgroundColor = colors[currentColorIndex];
+    body.style.background = `linear-gradient(135deg, ${colors[currentColorIndex]}, ${colors[(currentColorIndex + 1) % colors.length]})`;
     currentColorIndex = (currentColorIndex + 1) % colors.length;
 }
 
@@ -34,11 +34,11 @@ document.querySelector('.contact form').addEventListener('submit', function (e) 
 document.querySelectorAll('.feature-item').forEach(card => {
     card.addEventListener('mouseenter', () => {
         card.style.transform = 'translateY(-10px)';
-        card.style.boxShadow = '0 8px 12px rgba(0, 0, 0, 0.2)';
+        card.style.boxShadow = '0 15px 40px rgba(0, 0, 0, 0.5)';
     });
 
     card.addEventListener('mouseleave', () => {
         card.style.transform = 'translateY(0)';
-        card.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+        card.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.3)';
     });
 });
