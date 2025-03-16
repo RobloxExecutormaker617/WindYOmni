@@ -11,25 +11,57 @@
     <!-- Matrix Background -->
     <canvas id="matrix"></canvas>
 
-    <!-- Main Content -->
-    <header>
-        <h1>Matrix Executor</h1>
-        <p>Your ultimate tool for execution and automation.</p>
-    </header>
-
+    <!-- Buttons at the Top -->
     <nav>
         <ul>
-            <li><a href="index.html">🏠 Home</a></li>
-            <li><a href="features.html">✨ Features</a></li>
-            <li><a href="download.html">💾 Download</a></li>
-            <li><a href="contact.html">📞 Contact</a></li>
+            <li><a href="#home" class="btn">🏠 Home</a></li>
+            <li><a href="#features" class="btn">✨ Features</a></li>
+            <li><a href="#download" class="btn">💾 Download</a></li>
+            <li><a href="#contact" class="btn">📞 Contact</a></li>
         </ul>
     </nav>
 
-    <section class="hero">
-        <h2>Welcome to the Matrix</h2>
-        <p>Experience the power of our executor with cutting-edge features.</p>
-        <a href="download.html" class="btn">💻 Download Now</a>
+    <!-- Main Content -->
+    <section id="home" class="hero">
+        <h1>Matrix Executor</h1>
+        <p>Your ultimate tool for execution and automation.</p>
+        <a href="#download" class="btn">💻 Download Now</a>
+    </section>
+
+    <section id="features" class="features">
+        <h2>✨ Features</h2>
+        <div class="feature-list">
+            <div class="feature-item">
+                <h3>⚡ Fast & Reliable</h3>
+                <p>Blazing-fast execution with minimal lag.</p>
+            </div>
+            <div class="feature-item">
+                <h3>🔒 Secure</h3>
+                <p>Built with top-notch security to protect your data.</p>
+            </div>
+            <div class="feature-item">
+                <h3>🎯 Easy to Use</h3>
+                <p>User-friendly interface for seamless operation.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="download" class="download">
+        <h2>💾 Download</h2>
+        <p>Get the latest version of our executor.</p>
+        <a href="#" class="btn">💻 Download for Windows</a>
+        <a href="#" class="btn">🍏 Download for Mac</a>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>📞 Contact</h2>
+        <p>Have questions? Reach out to us!</p>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">📩 Send Message</button>
+        </form>
     </section>
 
     <footer>
