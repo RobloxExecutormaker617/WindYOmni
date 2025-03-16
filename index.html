@@ -3,36 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Executor & API Service</title>
+    <title>Hacker Executor</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Folder Icons in Top Right Corner -->
+    <div class="folder-icons">
+        <div class="folder">📁 Home</div>
+        <div class="folder">📁 Features</div>
+        <div class="folder">📁 Download</div>
+        <div class="folder">📁 Contact</div>
+    </div>
+
+    <!-- Main Content -->
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="features.html">Features</a></li>
-                <li><a href="tos.html">Terms of Service</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <h1>Hacker Executor</h1>
+        <p>Your ultimate tool for hacking and execution.</p>
     </header>
 
-    <main>
-        <section class="hero">
-            <h1>Welcome to Our Executor & API Service</h1>
-            <p>Powerful tools for developers and Discord enthusiasts.</p>
-            <button onclick="location.href='features.html'">Explore Features</button>
-        </section>
+    <section class="hero">
+        <div class="hero-content">
+            <h2>🚀 Welcome to the Future</h2>
+            <p>Experience the power of our executor with cutting-edge features.</p>
+            <a href="#download" class="btn">💾 Download Now</a>
+        </div>
+    </section>
 
-        <section class="about">
-            <h2>About Us</h2>
-            <p>We provide a robust executor and API service designed to enhance your Discord experience. Our tools are secure, reliable, and easy to use.</p>
-        </section>
-    </main>
+    <section id="features" class="features">
+        <h2>✨ Features</h2>
+        <div class="feature-list">
+            <div class="feature-item">
+                <h3>⚡ Fast & Reliable</h3>
+                <p>Blazing-fast execution with minimal lag.</p>
+            </div>
+            <div class="feature-item">
+                <h3>🔒 Secure</h3>
+                <p>Built with top-notch security to protect your data.</p>
+            </div>
+            <div class="feature-item">
+                <h3>🎯 Easy to Use</h3>
+                <p>User-friendly interface for seamless operation.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="download" class="download">
+        <h2>📥 Download</h2>
+        <p>Get the latest version of our executor.</p>
+        <a href="#" class="btn">💻 Download for Windows</a>
+        <a href="#" class="btn">🍏 Download for Mac</a>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>📞 Contact</h2>
+        <p>Have questions? Reach out to us!</p>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">📩 Send Message</button>
+        </form>
+    </section>
 
     <footer>
-        <p>&copy; 2023 Executor & API Service. All rights reserved.</p>
+        <p>© 2023 Hacker Executor. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
