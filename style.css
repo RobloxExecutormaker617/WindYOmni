@@ -1,20 +1,22 @@
 /* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
-    transition: background-color 1s ease, color 1s ease;
+    background: linear-gradient(135deg, #1a1a1a, #333);
+    color: #fff;
+    overflow-x: hidden;
+    transition: background 1s ease;
 }
 
 header {
-    background-color: rgba(51, 51, 51, 0.9);
-    color: #fff;
-    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px 0;
     text-align: center;
     position: sticky;
     top: 0;
     z-index: 1000;
+    backdrop-filter: blur(10px);
 }
 
 nav ul {
@@ -25,41 +27,46 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
+    font-weight: 600;
+    font-size: 18px;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #007BFF;
+    color: #00FF88;
+    transform: translateY(-3px);
 }
 
 main {
-    padding: 20px;
+    padding: 40px 20px;
 }
 
 footer {
-    background-color: rgba(51, 51, 51, 0.9);
+    background: rgba(0, 0, 0, 0.8);
     color: #fff;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
     position: fixed;
     width: 100%;
     bottom: 0;
+    backdrop-filter: blur(10px);
 }
 
 /* Hero Section */
 .hero {
     text-align: center;
-    padding: 100px 20px;
-    color: #fff;
+    padding: 150px 20px;
     background: linear-gradient(135deg, #007BFF, #00FF88);
     animation: gradientShift 10s infinite alternate;
+    border-radius: 20px;
+    margin: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 @keyframes gradientShift {
@@ -71,20 +78,35 @@ footer {
     }
 }
 
+.hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
 .hero button {
-    padding: 10px 20px;
+    padding: 15px 30px;
     background-color: #fff;
     color: #007BFF;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 600;
     transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .hero button:hover {
     transform: scale(1.1);
-    background-color: #007BFF;
+    background-color: #00FF88;
     color: #fff;
 }
 
@@ -93,83 +115,100 @@ footer {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    margin: 40px 0;
 }
 
 .feature-item {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    margin: 10px;
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    margin: 20px;
+    border-radius: 20px;
     width: 30%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(10px);
 }
 
 .feature-item:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.feature-item h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #00FF88;
+}
+
+.feature-item p {
+    font-size: 16px;
+    color: #ccc;
 }
 
 /* Contact Form */
+.contact {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    margin: 40px auto;
+    max-width: 600px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.contact h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #00FF88;
+}
+
 .contact form {
     display: flex;
     flex-direction: column;
-    max-width: 400px;
-    margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .contact label {
-    margin-top: 10px;
-    font-weight: bold;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 15px;
+    color: #fff;
 }
 
 .contact input, .contact textarea {
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
     font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transition: background 0.3s ease;
+}
+
+.contact input:focus, .contact textarea:focus {
+    background: rgba(255, 255, 255, 0.3);
+    outline: none;
 }
 
 .contact button {
     margin-top: 20px;
-    padding: 10px;
-    background-color: #007BFF;
-    color: #fff;
+    padding: 15px;
+    background-color: #00FF88;
+    color: #1a1a1a;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .contact button:hover {
-    background-color: #0056b3;
-}
-
-/* Background Animation */
-@keyframes colorChange {
-    0% {
-        background-color: #007BFF;
-    }
-    25% {
-        background-color: #00FF88;
-    }
-    50% {
-        background-color: #FF5733;
-    }
-    75% {
-        background-color: #F333FF;
-    }
-    100% {
-        background-color: #007BFF;
-    }
-}
-
-.animated-bg {
-    animation: colorChange 10s infinite;
+    transform: scale(1.05);
+    background-color: #007BFF;
+    color: #fff;
 }
